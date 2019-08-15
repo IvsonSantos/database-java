@@ -27,15 +27,8 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 		
 		log.info("All users -> {}", personRepository.findById(1003));
 		
+		log.info("All users -> {}", personRepository.findAll());
 		
-//		log.info("User -> {}", dao.findById(10001));
-//		
-//		log.info("User -> {}", dao.deleteById(10002));
-//		
-//		log.info("Inserting ", dao.insert(new Person(1004, "Tara", "Berlim", new Date())));
-//		
-//		log.info("Update ", dao.insert(new Person(1003, "Tara 2", "Berlim", new Date())));
-
 	}
 
 }
