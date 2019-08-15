@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.ivson.point.entity.Person;
+import com.ivson.point.entity.mapper.PersonRowMapper;
 
 @Repository
 public class PersonJdbcDao {
@@ -18,7 +19,7 @@ public class PersonJdbcDao {
 
 	public List<Person> findAll() {
 		// mapper
-		return jdbcTemplate.query("select * from person", new BeanPropertyRowMapper(Person.class));
+		return jdbcTemplate.query("select * from person", new PersonRowMapper());
 	}
 	
 	public Person findById(int id) {
